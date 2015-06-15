@@ -1,1 +1,4 @@
-Obituaries/*
+Obituaries/*/*
+*.swp
+*.swo
+*.swn

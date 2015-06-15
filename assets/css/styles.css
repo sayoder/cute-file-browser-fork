@@ -218,6 +218,7 @@ body {
 	white-space: nowrap;
 	position: absolute;
 	display: inline-block;
+    font-family: Arial;
 }
 
 .filemanager .nothingfound {
