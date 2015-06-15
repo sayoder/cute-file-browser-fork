@@ -155,10 +155,10 @@ $(function(){
 
 					if (rendered.length) {
 						currentPath = hash[0];
-						render(rendered);
+						render(rendered,"");
 					}
 					else {
-						render(rendered);
+						render(rendered,"");
 					}
 
 				}
@@ -167,19 +167,22 @@ $(function(){
 
 				else if (hash[0].trim().length) {
 
-					rendered = searchByPath(hash[0]);
+					renderResult = searchByPath(hash[0]);
+                    description = renderResult[0];
+                    rendered = renderResult[1];
+
 
 					if (rendered.length) {
 
 						currentPath = hash[0];
 						breadcrumbsUrls = generateBreadcrumbs(hash[0]);
-						render(rendered);
+						render(rendered,description);
 
 					}
 					else {
 						currentPath = hash[0];
 						breadcrumbsUrls = generateBreadcrumbs(hash[0]);
-						render(rendered);
+						render(rendered,description);
 					}
 
 				}
@@ -187,9 +190,15 @@ $(function(){
 				// if there is no hash
 
 				else {
+
 					currentPath = data.path;
 					breadcrumbsUrls.push(data.path);
-					render(searchByPath(data.path));
+
+					renderResult = searchByPath(data.path);
+                    description = renderResult[0];
+                    rendered = renderResult[1];
+
+					render(rendered,description);
 				}
 			}
 		}
@@ -224,9 +233,8 @@ $(function(){
 				}
 			}
 
-            demo.splice(0, 0, desc);
 			demo = flag ? demo : [];
-			return demo;
+			return [desc,demo];
 		}
 
 
@@ -257,23 +265,12 @@ $(function(){
 
 		// Render the HTML for the file manager
 
-		function render(data) {
-
+		function render(data, description) {
 			var scannedFolders = [],
 				scannedFiles = [];
-                description = "";
 
 			if(Array.isArray(data)) {
-
-                if (data.length) {
-                    description = data[0];
-                    data2 = data.slice(1);
-                } else {
-                    description = ""
-                    data2 = data
-                }
-
-				data2.forEach(function (d) {
+				data.forEach(function (d) {
 
 					if (d.type === 'folder') {
 						scannedFolders.push(d);
@@ -285,11 +282,8 @@ $(function(){
 				});
 
 			} else if(typeof data === 'object') {
-                console.log(data);
-                description = "";
 				scannedFolders = data.folders;
 				scannedFiles = data.files;
-
 			}
 
 			// Empty the old result and make the new one
