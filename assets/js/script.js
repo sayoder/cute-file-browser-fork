@@ -261,6 +261,7 @@ $(function(){
 
 			var scannedFolders = [],
 				scannedFiles = [];
+                description = "";
 
 			if(Array.isArray(data)) {
 
@@ -283,12 +284,11 @@ $(function(){
 
 				});
 
-			}
-
-			else if(typeof data2 === 'object') {
-                description = ""
-				scannedFolders = data2.folders;
-				scannedFiles = data2.files;
+			} else if(typeof data === 'object') {
+                console.log(data);
+                description = "";
+				scannedFolders = data.folders;
+				scannedFiles = data.files;
 
 			}
 
