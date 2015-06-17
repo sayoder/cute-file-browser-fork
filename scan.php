@@ -73,9 +73,9 @@ function get_description($path){
 header('Content-type: application/json');
 
 echo json_encode(array(
-	"name" => "PMH",
+	"name" => $dir,
 	"type" => "folder",
 	"path" => $dir,
-    "description" => get_description("PMH"),
+    "description" => get_description($dir),
 	"items" => $response
 ));
