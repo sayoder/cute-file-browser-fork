@@ -17,15 +17,10 @@
 
 body {
 	background-color: #23232e;
-	font: 14px normal Arial, Helvetica, sans-serif;
-    //font: 14px normal 'EB Garamond', serif;
+	//font: 14px normal Arial, Helvetica, sans-serif;
+    font: 14px normal 'EB Garamond', serif;
 
 	z-index: -4;
-}
-
-span.folderName {
-    font-family: 'EB Garamond', serif;
-    font-size: 34px;
 }
 
 
@@ -172,10 +167,10 @@ span.folderName {
 .filemanager .data li {
 	border-radius: 3px;
 	background-color: #373743;
-	width: 180px;
-	height: 40px;
+	width: 307px;
+	height: 118px;
 	list-style-type: none;
-	margin: 5px;
+	margin: 10px;
 	display: inline-block;
 	position: relative;
 	overflow: hidden;
@@ -201,7 +196,7 @@ span.folderName {
 
 .filemanager .data li .name {
 	color: #ffffff;
-	font-size: 12px;
+	font-size: 15px;
 	//font-weight: 700;
 	line-height: 20px;
 	width: 150px;
@@ -210,7 +205,7 @@ span.folderName {
 	position: absolute;
 	overflow: hidden;
 	text-overflow: ellipsis;
-	top: 10px;
+	top: 40px;
 }
 
 .filemanager .data li .details {
@@ -305,7 +300,7 @@ span.folderName {
 -------------------------*/
 
 .icon {
-	font-size: 8px;
+	font-size: 23px;
 }
 .icon.folder {
 	display: inline-block;
@@ -362,7 +357,7 @@ span.folderName {
 	box-shadow: 1.74em -2.1em 0 0 #A4A7AC inset;
 }
 .icon.file:first-line {
-	font-size: 8px;
+	font-size: 13px;
 	//font-weight: 700;
 }
 .icon.file:after {
@@ -372,8 +367,8 @@ span.folderName {
 	border-width: 0;
 	border-bottom: 2.6em solid #DADDE1;
 	border-right: 2.22em solid rgba(0, 0, 0, 0);
-	top: -1em;
-	right: -0.5em;
+	top: -34.5px;
+	right: -4px;
 }
 
 .icon.file.f-avi,
