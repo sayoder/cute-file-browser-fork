@@ -1,25 +1,29 @@
 #!/bin/bash
 
 DIR=$1
+CD=$(pwd)
 
-cd ./assets/css
+pwd
+
+cd $CD/assets/css
 if [ -e "./styles_large.css" ]; then
     mv styles.css styles_small.css
     mv styles_large.css styles.css
-    cd ../..
 fi
+cd ../..
 
 if [ -z $DIR ]; then
-    echo "Usage: ./setup.sh DIR"
+    echo "Usage: ./setup.sh DIR [--small]"
     echo "       where DIR is the name of the data directory."
+    echo "       Add --small to use the more compact CSS styles."
     echo "Example: ./setup.sh Obituaries"
     exit 1
 fi
 
 CSS=$2
 
-if [ $CSS = "--small" ]; then
-    cd ./assets/css
+if [ ! -z $CSS ] && [ $CSS = "--small" ]; then
+    cd $CD/assets/css
     mv styles.css styles_large.css
     mv styles_small.css styles.css
     cd ../..
