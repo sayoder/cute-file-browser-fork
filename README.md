@@ -6,3 +6,10 @@ browse a large index of obituaries. The primary modification that I have made is
 the addition of a description mechanism, where a file called '.description.html'
 can be added to any given directory to print an HTML description of its
 contents.
+
+Installation
+============
+
+* Clone in a folder
+* run setup.sh with the name of the data directory and --small to use the small CSS theme.
+* Point a web server to index.html
