@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DIR=$1
+DIR=$(basename $1)
 CD=$(pwd)
 
 pwd
