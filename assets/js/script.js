@@ -2,7 +2,8 @@ $(function(){
 
 	var filemanager = $('.filemanager'),
 		breadcrumbs = $('.breadcrumbs'),
-		fileList = filemanager.find('.data');
+		fileList = filemanager.find('.data'),
+        header = $('#main-header');
 
 	// Start by fetching the file data from scan.php with an AJAX request
 
@@ -30,7 +31,7 @@ $(function(){
 
 		// Hiding and showing the search box
 
-		filemanager.find('.search').click(function(){
+		header.find('.search').click(function(){
 
 			var search = $(this);
 
@@ -44,7 +45,7 @@ $(function(){
 		// We are using the "input" event which detects cut and paste
 		// in addition to keyboard input.
 
-		filemanager.find('input').on('input', function(e){
+		header.find('input').on('input', function(e){
 
 			folders = [];
 			files = [];
