@@ -16,7 +16,7 @@
 -------------------------*/
 
 body {
-	background-color: #23232e;
+	background-color: #ffffff;
 	font: 14px normal Arial, Helvetica, sans-serif;
     //font: 14px normal 'EB Garamond', serif;
 
@@ -38,7 +38,7 @@ span.folderName {
 	width: 95%;
 	max-width:1340px;
 	position: relative;
-	margin: 100px auto 50px;
+	margin: 130px auto 50px;
 }
 
 @media all and (max-width: 965px) {
@@ -54,25 +54,26 @@ span.folderName {
 -------------------------*/
 
 
-.filemanager .breadcrumbs {
+.breadcrumbs {
 	color: #ffffff;
 	margin-left:20px;
 	font-size: 24px;
-	//font-weight: 700;
+	padding-top: 20px;
+    //font-weight: 700;
 	line-height: 35px;
 }
 
-.filemanager .breadcrumbs a:link, .breadcrumbs a:visited {
+.breadcrumbs a:link, .breadcrumbs a:visited {
 	color: #ffffff;
 	text-decoration: none;
 }
 
-.filemanager .breadcrumbs a:hover {
+.breadcrumbs a:hover {
 	text-decoration: underline;
 }
 
-.filemanager .breadcrumbs .arrow {
-	color:  #6a6a72;
+.breadcrumbs .arrow {
+	color:  #ffffff;
 	font-size: 24px;
 	//font-weight: 700;
 	line-height: 20px;
@@ -84,7 +85,7 @@ span.folderName {
 -------------------------*/
 
 
-.filemanager .search {
+.search {
 	position: absolute;
 	padding-right: 30px;
 	cursor: pointer;
@@ -92,11 +93,12 @@ span.folderName {
 	font-size: 17px;
 	color: #ffffff;
 	display: block;
+    bottom: 0px;
 	width: 40px;
 	height: 40px;
 }
 
-.filemanager .search:before {
+.search:before {
 	content: '';
 	position: absolute;
 	margin-top:12px;
@@ -107,7 +109,7 @@ span.folderName {
 	right: 8px;
 }
 
-.filemanager .search:after {
+.search:after {
 	content: '';
 	width: 3px;
 	height: 10px;
@@ -120,7 +122,7 @@ span.folderName {
 	transform: rotate(-45deg);
 }
 
-.filemanager .search input[type=search] {
+.search input[type=search] {
 	border-radius: 2px;
 	color: #4D535E;
 	background-color: #FFF;
@@ -171,7 +173,7 @@ span.folderName {
 
 .filemanager .data li {
 	border-radius: 3px;
-	background-color: #373743;
+	background-color: #eee;
 	width: 180px;
 	height: 40px;
 	list-style-type: none;
@@ -187,7 +189,7 @@ span.folderName {
 }
 
 .filemanager .data li:hover {
-	background-color: #42424E;
+	background-color: #ccc;
 
 }
 
@@ -200,7 +202,7 @@ span.folderName {
 }
 
 .filemanager .data li .name {
-	color: #ffffff;
+	color: #373743;
 	font-size: 12px;
 	//font-weight: 700;
 	line-height: 20px;
@@ -214,7 +216,7 @@ span.folderName {
 }
 
 .filemanager .data li .details {
-	color: #b6c1c9;
+	color: #787878;
 	font-size: 13px;
 	font-weight: 400;
 	width: 55px;
@@ -227,7 +229,7 @@ span.folderName {
 }
 
 .filemanager .nothingfound {
-	background-color: #373743;
+	background-color: #fff;
 	width: 23em;
 	height: 21em;
 	margin: 0 auto;
@@ -242,7 +244,7 @@ span.folderName {
 	top: 3em;
 	border-radius: 50%;
 	position:relative;
-	background-color: #d72f6e;
+	background-color: #AD0000;
 	width: 11em;
 	height: 11em;
 	line-height: 11.4em;
@@ -258,7 +260,7 @@ span.folderName {
 
 .filemanager .nothingfound span {
 	margin: 0 auto auto 6.8em;
-	color: #ffffff;
+	color: #373737;
 	font-size: 16px;
 	//font-weight: 700;
 	line-height: 20px;
@@ -293,10 +295,10 @@ span.folderName {
 -------------------------*/
 
 .description {
-    font-family: 'Arial Black', Gadget, sans-serif;
+    font-family: 'Arial', Gadget, sans-serif;
     font-size: 12px;
     margin-left: 20px;
-    color: #ffffff
+    color: #373743
 }
 
 
@@ -316,7 +318,7 @@ span.folderName {
 .icon.folder:before {
 	content: '';
 	float: left;
-	background-color: #7ba1ad;
+	background-color: #5B7982;
 
 	width: 1.5em;
 	height: 0.45em;
@@ -327,14 +329,14 @@ span.folderName {
 	border-top-left-radius: 0.1em;
 	border-top-right-radius: 0.1em;
 
-	box-shadow: 1.25em 0.25em 0 0em #7ba1ad;
+	box-shadow: 1.25em 0.25em 0 0em #5B7982;
 }
 .icon.folder:after {
 	content: '';
 	float: left;
 	clear: left;
 
-	background-color: #a0d4e4;
+	background-color: #7ba1ad;
 	width: 3em;
 	height: 2.25em;
 
@@ -489,6 +491,49 @@ span.folderName {
 .icon.file.f-saas:after,
 .icon.file.f-scss:after {
 	border-bottom-color: #30837c;
+}
+
+
+
+/*----------------------------
+ * Header
+-----------------------------*/
+
+header { line-height: 23px;
+    font-weight: 500;
+    top: 0;
+    background-color: #cc6600;
+    width: 100%;
+    padding: 18px 0 0 0;
+    min-height: 43px;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+    -moz-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    position: fixed;
+    z-index: 99999;
+ }
+
+
+/*----------------------------
+ * Logo
+-----------------------------*/
+#logo {
+    float: left;
+    max-height: 65px;
+    margin-bottom: 20px;
+}
+
+.clearfix-container {
+    text-align: left;
+    margin-top:0;
+    margin-bottom:0;
+    margin-left:10%;
+    margin-right:10%;
+    width: 80%;
+    position: relative;
 }
 
 
